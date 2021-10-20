@@ -1,0 +1,49 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.ContatoModel
+@{
+}
+
+
+<div class="container">
+    <div class="formulario">
+        <h3> Entre em contato conosco:</h3>
+        <form-input>
+            <div class="form-outline">
+                <input type="text" id="typeText" class="form-control" placeholder="Nome" />
+                <input type="email" id="typeText" class="form-control" placeholder="Email" />
+                <textarea class="form-control" id="textArea" rows="4" placeholder="Digite sua mensagem aqui..."></textarea>
+            </div>
+            <button class="btn btn-primary">Enviar</button>
+        </form-input>
+    </div>
+</div>
+
+<style>
+    .formulario {
+        padding: 3%;
+        background-color: #e7f8f8;
+        width: 600px;
+        border-radius: 2%;
+        margin: auto;
+        margin-bottom: 3%;
+    }
+
+    .btn {
+        align-content: center;
+        text-align: center;
+        margin-block: 3%;
+    }
+
+    .h3 {
+        font-family: Arial, sans-serif;
+    }
+
+    #typeText {
+        margin: 2px;
+    }
+
+    .form-outline {
+        position: relative;
+        padding: 2px;
+    }
+</style>

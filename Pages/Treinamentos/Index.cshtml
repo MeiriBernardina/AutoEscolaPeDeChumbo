@@ -1,0 +1,43 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Treinamentos.IndexModel
+
+@{
+    ViewData["Title"] = "Treinamentos";
+}
+
+<h1>Treinamentos</h1>
+
+<p>
+    <a asp-page="Create">Criar novo</a>
+</p>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Treinamento[0].TipoTreinamento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Treinamento[0].DtInicio)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Treinamento)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TipoTreinamento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DtInicio)
+                </td>
+                <td>
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                    <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

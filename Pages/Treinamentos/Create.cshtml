@@ -1,0 +1,39 @@
+﻿@page
+@model AutoEscolaPeDeChumbo.Pages.Treinamentos.CreateModel
+
+@{
+    ViewData["Title"] = "Treinamentos";
+}
+
+<h1>Criar</h1>
+
+<h4>Treinamento</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Treinamento.TipoTreinamento" class="control-label"></label>
+                <input asp-for="Treinamento.TipoTreinamento" class="form-control" />
+                <span asp-validation-for="Treinamento.TipoTreinamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Treinamento.DtInicio" class="control-label"></label>
+                <input asp-for="Treinamento.DtInicio" class="form-control" />
+                <span asp-validation-for="Treinamento.DtInicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Índice">Voltar para lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
